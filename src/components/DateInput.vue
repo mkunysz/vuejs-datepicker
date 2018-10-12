@@ -120,10 +120,11 @@ export default {
       }
 
       if (this.typeable) {
-        const typedDate = moment(this.input.value, this.format)
+        const typedDate = moment(this.input.value, this.format.toUpperCase())
         if (!isNaN(typedDate)) {
-          this.typedDate = typedDate
-          this.$emit('typedDate', new Date(this.typedDate.toDate()))
+          this.typedDate = this.input.value
+          console.log(this.typedDate, this.format);
+          this.$emit('typedDate', moment(this.typedDate, this.format.toUpperCase()).toDate())
         }
       }
     },
