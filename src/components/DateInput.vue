@@ -122,7 +122,7 @@ export default {
       if (this.typeable) {
         const typedDate = moment(this.input.value, this.format)
         if (!isNaN(typedDate)) {
-          this.typedDate = this.input.value
+          this.typedDate = typedDate
           this.$emit('typedDate', new Date(this.typedDate.toDate()))
         }
       }
