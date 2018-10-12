@@ -123,7 +123,6 @@ export default {
         const typedDate = moment(this.input.value, this.format.toUpperCase())
         if (!isNaN(typedDate)) {
           this.typedDate = this.input.value
-          console.log(this.typedDate, this.format);
           this.$emit('typedDate', moment(this.typedDate, this.format.toUpperCase()).toDate())
         }
       }
