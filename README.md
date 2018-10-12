@@ -29,15 +29,15 @@ To view demo examples locally clone the repo and run `yarn install && yarn serve
 ## Install
 
 ``` bash
-npm install vuejs-datepicker --save
+npm install vue-moment-datepicker --save
 ```
 or
 ``` bash
-yarn add vuejs-datepicker
+yarn add vue-moment-datepicker
 ```
 
 ``` javascript
-import Datepicker from 'vuejs-datepicker';
+import Datepicker from 'vue-moment-datepicker';
 
 export default {
   // ...
