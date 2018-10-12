@@ -1,6 +1,6 @@
 {
-  "name": "vuejs-datepicker",
-  "version": "1.5.3",
+  "name": "vue-moment-datepicker",
+  "version": "1.0.0",
   "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations",
   "keywords": [
     "vue",
@@ -36,7 +36,6 @@
     "lint",
     "test"
   ],
-  "dependencies": {},
   "peerDependencies": {
     "vue": "^2.3.0"
   },
@@ -67,6 +66,7 @@
     "jest": "^22.4.3",
     "jest-serializer-vue": "^1.0.0",
     "lolex": "^1.5.2",
+    "moment": "^2.22.2",
     "opn": "^4.0.2",
     "ora": "^1.2.0",
     "parse5": "^2.1.0",
