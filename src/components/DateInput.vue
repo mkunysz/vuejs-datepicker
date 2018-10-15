@@ -120,10 +120,10 @@ export default {
       }
 
       if (this.typeable) {
-        const typedDate = moment(this.input.value, this.format.toUpperCase())
-        if (!isNaN(typedDate)) {
+        const typedDate = moment(this.input.value, this.format.toUpperCase().replace(/\//g, '-'))
+        if (typedDate._isValid) {
           this.typedDate = this.input.value
-          this.$emit('typedDate', moment(this.typedDate, this.format.toUpperCase()).toDate())
+          this.$emit('typedDate', moment(this.typedDate, this.format.toUpperCase().replace(/\//g, '-')).toDate())
         }
       }
     },
@@ -132,7 +132,7 @@ export default {
      * called once the input is blurred
      */
     inputBlurred () {
-      if (this.typeable && isNaN(Date.parse(this.input.value))) {
+      if (this.typeable && !moment(this.input.value, this.format.toUpperCase().replace(/\//g, '-'))._isValid) {
         this.clearDate()
         this.input.value = null
         this.typedDate = null
